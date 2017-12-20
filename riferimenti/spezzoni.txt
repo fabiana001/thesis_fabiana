@@ -1,0 +1,21 @@
+
+FROM A Survey of Web Information Extraction Systems \\
+The input can be unstructured documents like
+free text that are written in natural language (e.g. Figure 1)
+or the semi-structured documents that are pervasive on the
+Web, such as tables or itemized and enumerated lists (e.g.
+Figure 2). The extraction target of an IE task can be a relation
+of k-tuple (where k is the number of attributes in a record)
+or it can be a complex object with hierarchically organized
+data. For some IE tasks, an attribute may have zero
+(missing) or multiple instantiations in a record. The difficulty
+of an IE task can be further complicated when various
+permutations of attributes or typographical errors occur in
+the input documents. 
+
+\color{red}
+The World Wide Web is the largest, but as yet under-utilized, informative sources. It contains vast amount of information regarding any topic which is stored in web resources having in heterogeneous formats (e.g. HTML, XML, ODF, etc.). Web resources (i.e. web pages) are primarily intended for human consumption and thus their information content is easily not accessible for automatic processing. 
+Although several works focus on the problem of web information harvesting, the dimension and the heterogeneity of the Whierarchically organizedeb leave the automatic 
+process of information extraction an open issue.
+Since each web page is characterized by multiple representations, many existing methods and approaches consider both structural representations (e.g. DOM tree) and visual representation rendered by the web browser engine.
+ %Each of these solutions has its purpose, advantages and disadvantages; however, consideration of web page visual models is known to ensure the development of more robust and effective methods which can be applied over a wider range of web pages (Fayzrakhmanov, 2013, sec. 2.4). 

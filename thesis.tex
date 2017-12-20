@@ -1,0 +1,260 @@
+
+
+%
+% ----------------------------------------------------------------
+% *************************PhD Thesis ************************
+% ----------------------------------------------------------------
+%\documentclass[twoside,openright,a4paper,fleqn]{book}
+%\usepackage{a4}
+\documentclass[final,a4paper]{book}
+\usepackage{phdthesis}
+\usepackage[T1]{fontenc}
+\usepackage[ansinew]{inputenc}
+\usepackage{latexsym,amssymb}
+\usepackage{makeidx}
+\usepackage[chapter]{tocbibind}
+\renewcommand{\figurename}{\footnotesize\sc Figure\rm}
+\renewcommand{\tablename}{\footnotesize\sc Table\rm}
+
+\usepackage[active]{srcltx}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{epsfig}
+%\usepackage{algorithm}
+%\usepackage{algpseudocode}
+
+%\usepackage[refpages]{gloss}
+
+%\usepackage{subfigure} % was: subfignarms.sty
+%\usepackage{psfig}
+
+
+\usepackage{layout}
+%Theorem
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{definition}{Definition}
+\newtheorem{notation}{Notation}
+\newtheorem{property}{Property}
+\newtheorem{example}{Example}
+\newtheorem{proposition}{Proposition}
+\newtheorem{proof}{Proof}
+\usepackage{color}
+%-------------------------------------------------
+%Libraries used in chapter 2
+\usepackage{amssymb}
+\setcounter{tocdepth}{3}
+\usepackage{graphicx}
+\usepackage{color}
+%\usepackage{subfigure}
+%\usepackage{amsmath}
+\usepackage{mathtools}
+\DeclareMathOperator*{\argmax}{arg\,max}
+%\usepackage[algo2e]{algorithm2e} 
+
+%Libraries used in chapter 3
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subfig}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+%Libraries in chapter 4
+%\usepackage{rotating}
+\usepackage{pdflscape}
+
+\usepackage{url}
+
+
+% ----------------------------------------------------------------
+\vfuzz2pt % Don't report over-full v-boxes if over-edge is small
+\hfuzz2pt % Don't report over-full h-boxes if over-edge is small
+
+% ENVIRONMENTS --------------------------------------------------
+\newlength{\larghezza}
+\newlength{\inizio}
+
+
+% ---------- intro -----------------------------------------------
+
+\makeindex
+
+% ---------- Glossary -------------------------------------
+%\makegloss
+
+% ---------- End Glossary ---------------------------------------
+
+\linespread {1.3}
+
+\oddsidemargin=54pt
+\evensidemargin=54pt
+
+\begin{document}
+%\layout
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RL]{\rightmark}
+\fancyhead[LO]{\leftmark}
+\fancyhead[LE,RO]{\small \thepage}
+
+\renewcommand{\chaptermark}[1]{\markboth{\sc\small #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\sc\small \thesection\ #1}}
+
+%\pagenumbering{Roman}
+% ========== Inizio FRONTESPIZIO ================
+%Titolo da rivedere e confermare
+\title{\sc \LARGE Discovering structured information from websites}
+\author{\LARGE \textit{Pasqua Fabiana Lanotte}\\
+Dipartimento di Informatica\\
+Dottorato in Informatica XXVIII ciclo\\
+\sc Universit\`a degli Studi di Bari ``Aldo Moro''\\
+\sl Via E. Orabona, 4 - 70125 Bari, \sc Italy\\
+\tt pasqua.lanotte@uniba.it
+}
+\date{
+%\begin{figure}[h]
+ % \centering
+  %\includegraphics[width=3cm]{fig/eu-flag.png} 
+%\end{figure}
+\vspace{1cm}
+%S.S.D.: INF/01\\
+\vspace{2cm}
+Supervisor: Prof. Michelangelo Ceci\\
+\vspace*{\fill}
+\begin{tabular}{c}
+	\hline
+	\it A dissertation submitted in partial fulfillment \\
+	\it of the requirements for the degree of\\
+	{\sc Doctor of Philosophy in Computer Science}\\
+	\hline	\\
+	Bari, February 2017
+\end{tabular}
+}
+% ========== Fine FRONTESPIZIO ================
+% ----------------------------------------------------------------
+
+\pagenumbering{roman}  
+
+\maketitle
+
+\clearpage
+
+%\section*{Credits}
+%This dissertation was typeset using these open-source programs:
+%\begin{itemize}
+%  \item [$\circ$] TeXShop LaTeX Editor \\
+%	available at: {\tt http://www.uoregon.edu/$\sim$koch/texshop/}
+%  \item [$\circ$] MacTex Distribution \\
+%	available at: {\tt http://www.tug.org/mactex/}
+%\end{itemize}
+\vspace*{\fill}
+
+
+\noindent 
+\begin{tabular}{p{185pt} p{110pt}}
+Thesis Supervisor \hskip 3cm \ & \\ \cline{2-2} & Prof. Michelangelo Ceci \\
+\end{tabular}
+
+\vspace{2cm} 
+
+\noindent
+\begin{tabular}{p{185pt} p{110pt}}
+Chairperson of the Supervisory Committee \hskip 2cm \ & \\ \cline{2-2} 
+\end{tabular}
+\vspace{1cm}
+
+\noindent
+\begin{tabular}{p{185pt} p{110pt}}
+Member of the Supervisory Committee \hskip 2cm \ & \\ \cline{2-2} 
+\end{tabular}
+\vspace{1cm}
+
+\noindent
+\begin{tabular}{p{185pt} p{110pt}}
+Member of the Supervisory Committee \hskip 2cm \ & \\ \cline{2-2} 
+\end{tabular}
+\vspace{2cm} 
+
+
+\vspace*{\fill} \noindent \hrule
+\begin{tabular}{l}
+	Submitted {\sl February 2017}\\
+	Copyright {\copyright} 2017 by Pasqua Fabiana Lanotte\\
+\end{tabular}
+\hrule
+
+
+% ----------------------------------------------------------------
+% insert toc
+\tableofcontents
+% ----------------------------------------------------------------
+% insert Lists
+\listoffigures
+\listoftables
+% ----------------------------------------------------------------
+% insert Acknowledgments
+
+\chapter*{Acknowledgments}
+\addcontentsline{toc}{chapter}{Acknowledgments}
+\markboth{\sc Acknowledgments}{\sc Acknowledgments}
+\input{ack}
+% ----------------------------------------------------------------
+% insert Abstract
+%\chapter*{Abstract}
+%\addcontentsline{toc}{chapter}{Abstract}
+%\markboth{\sc Abstract}{\sc Abstract}
+%\input{abstract}
+% ----------------------------------------------------------------
+\clearpage
+% ----------------------------------------------------------------
+
+
+\pagenumbering{arabic}
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+\markboth{\sc Abstract}{\sc Abstract}
+\input{preface}
+% ----------------------------------------------------------------
+\clearpage
+% ----------------------------------------------------------------
+\chapter{Introduction}
+\input{2Version/chap_1}
+
+\chapter {Automatic Extraction of Logical Web Lists}
+\label{chap:chap_1}
+\input{chap_2}
+
+
+\chapter{Exploiting Web Sites Structural and Content Features for Web Pages Clustering}
+\input{chap_4}
+ ----------------------------------------------------------------
+
+
+\chapter{Automatic Generation of Sitemaps Based on Navigation Systems}
+\input{chap_3}
+%vedi questo link per intro su navigation system e search
+%\url{https://books.google.it/books?hl=it&lr=&id=mDI72_9-bw0C&oi=fnd&pg=PR14&ots=yVrdtw7tEv&sig=TzAHTw_xuAJeBn75iuFZxNOLtvU#v=onepage&q&f=false}
+
+\chapter{CloFAST: Closed Sequential Pattern Mining using Sparse and Vertical Id-Lists}
+\input{chap_5/CloFAST}
+
+
+\chapter{Conclusion}
+\input{conclusion}
+
+
+
+\bibliographystyle{alpha} %mettere plain o alpha
+\bibliography{bibliography}
+
+% ----------------- Insert index
+%\addcontentsline{toc}{chapter}{Index of terms}
+%\printindex
+%\input{tesi.ind}
+\clearpage
+\vspace*{6cm}
+
+% ----------------------------------------------------------------
+\end{document}
+% ----------------------------------------------------------------

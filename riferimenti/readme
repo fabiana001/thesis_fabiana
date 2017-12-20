@@ -1,0 +1,15 @@
+1. Effective Web Data Extraction with Standard XML Technologies: ottima scomposizione del web information extraction in 5 tasks (o problemi) 
+2. Web Data Mining Trends and Techniques: interessante suddivisione delle feature delle pagine web e Web in generale
+3. Web Structure Mining Exploiting the Graph Structure of the World-Wide Web: spunti minori sull'analisi del grafo web
+
+4. AN INTRODUCTION TO SEARCH ENGINES AND WEB NAVIGATION
+5. Scenttrails:Integrating Browsing and Searching on the Web: interessante per browsing and seraching paradigm e per related works on hierarchical sitemaps
+6.  Mining Web navigation patterns with a path traversal graph: interessante per la scoperta dei pattern frequenti in un sito web.Da rileggere per bene. 
+7. A hybrid web personalization model: parla del sequential pattern mining among closed sequential pattern mining and associative rule nel campo dei raccomandation systems. (vedere anche Data Mining for Web Personalization)
+
+
+********************************************
+Da leggere
+1. Beyond the Web Graph: Mining the Information Architecture of the WWW with
+Navigation Structure Graphs
+
